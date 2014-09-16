@@ -30,7 +30,6 @@ public class Agencia {
             Conta c = contas.get(aux);
             if (numero == c.getNumero()){
                 c.depositar(valor);
-                contas.add(c);
             }
         }
         // TODO CRIAR EXECAO PARA NUMERO DE CONTA NAO EXISTENTE
@@ -41,10 +40,7 @@ public class Agencia {
         for (int aux = 0; aux < contas.size(); aux ++) {
             Conta c = contas.get(aux);
             if (numero == c.getNumero()){
-                c.listarDados();
                 c.sacar(valor);
-                c.listarDados();
-                contas.add(c);
             }
         }
         // TODO CRIAR EXECAO PARA NUMERO DE CONTA NAO EXISTENTE

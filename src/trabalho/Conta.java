@@ -24,16 +24,16 @@ public class Conta {
 	}
 	
 	public String listarDados() {
-		return "Numero da conta: " + numero +
-			   "Proprietario: " + proprietario +
-			   "Saldo: " + saldo;
-	}
-	
-	public void sacar(float valor) {
-		this.saldo += valor;
+		return "\nNumero da conta: " + numero +
+			   "\nProprietario: " + proprietario +
+			   "\nSaldo: " + saldo;
 	}
 	
 	public void depositar(float valor) {
+		this.saldo += valor;
+	}
+	
+	public void sacar(float valor) {
 		this.saldo -= valor;
 	}
 }

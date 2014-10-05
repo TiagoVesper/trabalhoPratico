@@ -24,9 +24,9 @@ public class Conta {
 	}
 	
 	public String listarDados() {
-		return "\nNumero da conta: " + numero +
-			   "\nProprietario: " + proprietario +
-			   "\nSaldo: " + saldo;
+		return "\n Numero da conta: " + numero +
+			   "\n Proprietario: " + proprietario +
+			   "\n Saldo: " + saldo;
 	}
 	
 	public void depositar(float valor) {

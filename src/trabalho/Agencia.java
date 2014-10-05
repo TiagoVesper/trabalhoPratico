@@ -3,7 +3,7 @@ package trabalho;
 import java.util.ArrayList;
 
 public class Agencia {
-	private byte MAX_CONTAS = 20;
+	private final byte MAX_CONTAS = 20;
 	private ArrayList<Conta> contas = new ArrayList<Conta>(MAX_CONTAS);
 	
 	public void criarConta(int numero, String proprietario, float saldo) {

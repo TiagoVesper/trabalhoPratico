@@ -12,54 +12,56 @@ public class Tp1App {
         float valor;
         boolean opcao = false;
 
-        while (!opcao) {
-            menu();
-            int operacao = dado.nextInt();
-            switch (operacao) {
-                case 1:
-                    System.out.println("1 - Criar conta");
-                    System.out.println("Informe o numero");
-                    numero = dado.nextInt();
-                    System.out.println("Informe o proprietario");
-                    proprietario = dado.next();
-                    System.out.println("Informe o saldo");
-                    float saldo = dado.nextFloat();
-                    a.criarConta(numero, proprietario, saldo);
-                    break;
-                case 2:
-                    System.out.println("2 - Cancelar conta");
-                    System.out.println("Informe o numero");
-                    numero = dado.nextInt();
-                    a.cancelarConta(numero);
-                    break;
-                case 3:
-                    System.out.println("3 - Sacar");
-                    System.out.println("Informe o numero");
-                    numero = dado.nextInt();
-                    System.out.println("Informe o valor de saque");
-                    valor = dado.nextFloat();
-                    a.sacar(numero, valor);
-                    break;
-                case 4:
-                    System.out.println("4 - Depositar");
-                    System.out.println("Informe o numero");
-                    numero = dado.nextInt();
-                    System.out.println("Informe o valor de deposito");
-                    valor = dado.nextFloat();
-                    a.depositar(numero, valor);
-                    break;
-                case 5:
-                    System.out.println("5 - Listar contas existentes");
-                    a.listarContas();
-                    break;
-                case 6:
-                    opcao = true;
-                    break;
-                default: System.out.println("Opcao invalida!");
-
-                    // TODO FAZER CLASSE DE EXCECAO PARA TRATAR OPCAO INVALIDA
-
+        try {
+            while (!opcao) {
+                menu();
+                int operacao = dado.nextInt();
+                switch (operacao) {
+                    case 1:
+                        System.out.println("1 - Criar conta");
+                        System.out.println("Informe o numero");
+                        numero = dado.nextInt();
+                        System.out.println("Informe o proprietario");
+                        proprietario = dado.next();
+                        System.out.println("Informe o saldo");
+                        float saldo = dado.nextFloat();
+                        a.criarConta(numero, proprietario, saldo);
+                        break;
+                    case 2:
+                        System.out.println("2 - Cancelar conta");
+                        System.out.println("Informe o numero");
+                        numero = dado.nextInt();
+                        a.cancelarConta(numero);
+                        break;
+                    case 3:
+                        System.out.println("3 - Sacar");
+                        System.out.println("Informe o numero");
+                        numero = dado.nextInt();
+                        System.out.println("Informe o valor de saque");
+                        valor = dado.nextFloat();
+                        a.sacar(numero, valor);
+                        break;
+                    case 4:
+                        System.out.println("4 - Depositar");
+                        System.out.println("Informe o numero");
+                        numero = dado.nextInt();
+                        System.out.println("Informe o valor de deposito");
+                        valor = dado.nextFloat();
+                        a.depositar(numero, valor);
+                        break;
+                    case 5:
+                        System.out.println("5 - Listar contas existentes");
+                        a.listarContas();
+                        break;
+                    case 6:
+                        opcao = true;
+                        break;
+                    default:
+                        throw new ExcecaoOpcaoInvalida("Opção Invalida.");
+                }
             }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 	}
 

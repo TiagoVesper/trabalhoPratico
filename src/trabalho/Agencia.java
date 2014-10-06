@@ -37,7 +37,7 @@ public class Agencia {
     }
 
     public String listarContas() {
-        String listaDeContas = "\n ========================================";
+        String listaDeContas = "";
         for (int aux = 0; aux < contas.size(); aux ++) {
             Conta c = contas.get(aux);
             listaDeContas = listaDeContas + c.listarDados();

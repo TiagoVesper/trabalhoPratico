@@ -29,7 +29,7 @@ public class Conta {
         return "\n Numero da conta: " + numero +
                 "\n Proprietario: " + proprietario +
                 "\n Saldo: " + saldo +
-                "\n ========================================";
+                "\n ";
     }
 
     public void sacar(float valor) {

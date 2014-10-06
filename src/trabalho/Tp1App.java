@@ -12,46 +12,51 @@ public class Tp1App {
         float valor;
         boolean opcao = false;
 
-        try {
-            while (!opcao) {
+        while (!opcao) {
+            try {
                 menu();
                 int operacao = dado.nextInt();
                 switch (operacao) {
                     case 1:
+                        System.out.println("========================================");
                         System.out.println("1 - Criar conta");
-                        System.out.println("Informe o numero");
+                        System.out.print("Informe o numero: ");
                         numero = dado.nextInt();
-                        System.out.println("Informe o proprietario");
+                        System.out.print("Informe o proprietario: ");
                         proprietario = dado.next();
-                        System.out.println("Informe o saldo");
+                        System.out.print("Informe o saldo: ");
                         float saldo = dado.nextFloat();
                         a.criarConta(numero, proprietario, saldo);
                         break;
                     case 2:
+                        System.out.println("========================================");
                         System.out.println("2 - Cancelar conta");
-                        System.out.println("Informe o numero");
+                        System.out.print("Informe o numero: ");
                         numero = dado.nextInt();
                         a.cancelarConta(numero);
                         break;
                     case 3:
+                        System.out.println("========================================");
                         System.out.println("3 - Sacar");
-                        System.out.println("Informe o numero");
+                        System.out.print("Informe o numero: ");
                         numero = dado.nextInt();
-                        System.out.println("Informe o valor de saque");
+                        System.out.print("Informe o valor de saque: ");
                         valor = dado.nextFloat();
                         a.sacar(numero, valor);
                         break;
                     case 4:
+                        System.out.println("========================================");
                         System.out.println("4 - Depositar");
-                        System.out.println("Informe o numero");
+                        System.out.print("Informe o numero: ");
                         numero = dado.nextInt();
-                        System.out.println("Informe o valor de deposito");
+                        System.out.print("Informe o valor de deposito: ");
                         valor = dado.nextFloat();
                         a.depositar(numero, valor);
                         break;
                     case 5:
+                        System.out.println("========================================");
                         System.out.println("5 - Listar contas existentes");
-                        a.listarContas();
+                        System.out.println(a.listarContas());
                         break;
                     case 6:
                         opcao = true;
@@ -59,16 +64,16 @@ public class Tp1App {
                     default:
                         throw new ExcecaoOpcaoInvalida("Opção Invalida.");
                 }
+            } catch (Exception e) {
+                System.out.println("========================================");
+                System.out.print(e.getMessage());
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
         }
 	}
 
     public static void menu() {
         System.out.println("========================================");
         System.out.println("Sistema Bancario - Operacoes Disponiveis");
-        System.out.println("");
         System.out.println("1 - Criar conta");
         System.out.println("2 - Cancelar conta");
         System.out.println("3 - Sacar");
@@ -76,7 +81,7 @@ public class Tp1App {
         System.out.println("5 - Listar contas existentes");
         System.out.println("6 - Finalizar o programa");
         System.out.println("");
-        System.out.println("Selecione uma operacao:");
+        System.out.print("Selecione uma operacao: ");
     }
 
 }

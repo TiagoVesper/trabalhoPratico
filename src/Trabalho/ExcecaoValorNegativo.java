@@ -1,4 +1,4 @@
-package TP1_TiagoCoimbrVesper_WagnerDiasMartins;
+package Trabalho;
 
 public class ExcecaoValorNegativo extends RuntimeException {
 

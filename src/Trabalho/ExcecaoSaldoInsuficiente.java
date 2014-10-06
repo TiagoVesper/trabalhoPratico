@@ -1,4 +1,4 @@
-package TP1_TiagoCoimbrVesper_WagnerDiasMartins;
+package Trabalho;
 
 public class ExcecaoSaldoInsuficiente extends RuntimeException {
 

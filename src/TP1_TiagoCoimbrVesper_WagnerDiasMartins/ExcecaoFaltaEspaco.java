@@ -1,4 +1,4 @@
-package trabalho;
+package TP1_TiagoCoimbrVesper_WagnerDiasMartins;
 
 public class ExcecaoFaltaEspaco extends RuntimeException {
 

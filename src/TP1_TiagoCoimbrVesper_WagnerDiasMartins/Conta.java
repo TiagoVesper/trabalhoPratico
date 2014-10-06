@@ -1,4 +1,4 @@
-package trabalho;
+package TP1_TiagoCoimbrVesper_WagnerDiasMartins;
 
 public class Conta {
 	private int numero;
